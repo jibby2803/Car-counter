@@ -5,3 +5,6 @@ draft.py
 **/logs/
 logs
 /logging/
+*.pt
+*.pth
+/YOLO-weight/
