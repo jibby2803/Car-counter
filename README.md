@@ -19,5 +19,5 @@ python detector.py
 You can use my code for your own videos: In **detector.py**
 * *Change the path of video to your own directory*
 * *Change the path of mask image to your own directory (you can create mask images in Canva, make sure that your detected region should be white and other region should be black)*
-* *Adjust the [x1, y1, x2, y2] according to your video and mask where (x1, y1), (x2, y2) are the coordinates starting and ending point of counting line*
+* *Adjust the [x1, y1, x2, y2] according to your video and mask where (x1, y1), (x2, y2) are the coordinates of starting point and ending point of counting line*
 * *Run detector.py*
