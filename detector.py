@@ -22,7 +22,7 @@ if cap.isOpened():
     width = cap.get(3) 
     height = cap.get(4)
     # print(f'width = {width}, height = {height}')
-# output = cv2.VideoWriter('./images/result.mp4',
+# output = cv2.VideoWriter('./result/result.mp4',
 #                          cv2.VideoWriter_fourcc(*'mp4v'),
 #                          30, (int(width), int(height)))
     
