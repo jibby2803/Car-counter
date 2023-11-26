@@ -3,9 +3,9 @@ import cv2
 
 model = YOLO('yolov8n.pt')
 
-cap = cv2.VideoCapture(0)
-cap.set(3, 640)
-cap.set(4, 480)
+cap = cv2.VideoCapture('./assets/videos/cars.mp4')
+# cap.set(3, 640)
+# cap.set(4, 480)
 while True:
     flag, img = cap.read()
     results = model(img, stream=True)
@@ -21,4 +21,4 @@ while True:
             
     cv2.imshow('image', img)
     cv2.waitKey(1)
-    
+   
