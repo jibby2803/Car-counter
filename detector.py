@@ -16,7 +16,10 @@ classes = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "train",
             "microwave", "oven", "toaster", "sink", "refrigerator", "book", "clock", "vase", "scissors",
             "teddy bear", "hair drier", "toothbrush"]
 
-cap = cv2.VideoCapture('./assets/videos/cars.mp4')
+# READ YOUR VIDEO HERE
+# -----------------------------------------------
+cap = cv2.VideoCapture('./assets/videos/cars.mp4') # change path to your video file path
+# -----------------------------------------------
 
 if cap.isOpened():
     width = cap.get(3) 
@@ -25,12 +28,21 @@ if cap.isOpened():
 # output = cv2.VideoWriter('./result/result.mp4',
 #                          cv2.VideoWriter_fourcc(*'mp4v'),
 #                          30, (int(width), int(height)))
-    
-mask = cv2.imread('./assets/images/mask.jpg')
+
+# CHANGE YOUR MASK HERE 
+# -----------------------------------------------
+mask = cv2.imread('./assets/images/mask.jpg') # change path to your mask file path
+# -----------------------------------------------
+
 mask = cv2.resize(mask, (int(width), int(height)))
 
 tracker = Sort(max_age=20, min_hits=3, iou_threshold=0.4)
-limit = [380, 290, 700, 290]
+
+# CHANGE THE COORDINATES OF THE COUNTING LINE 
+# ------------------------------------------------
+limit = [380, 290, 700, 290] # adjust the [x1, y1, x2, y2] according to your video and mask where (x1, y1), (x2, y2) are the coordinates starting and ending point of counting line
+# ------------------------------------------------
+
 total_count = []
 count = 0
 
