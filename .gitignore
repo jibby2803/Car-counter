@@ -7,3 +7,4 @@ logs
 /logging/
 *.pt
 *.pth
+convert_mp4_2_gif.py
