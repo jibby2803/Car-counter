@@ -7,4 +7,3 @@ logs
 /logging/
 *.pt
 *.pth
-/YOLO-weight/
