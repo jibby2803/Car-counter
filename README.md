@@ -11,8 +11,8 @@ In this code, I used sort.py file in an awesome github repository: https://githu
 ## How to use:
 ```bash
 pip install -r requirements.txt
-'''
-'''bash
+``
+```bash
 python detector.py
 ```
 You can use my code for your own videos:
