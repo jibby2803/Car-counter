@@ -9,6 +9,7 @@ In this code, I used sort.py file in an awesome github repository: https://githu
 </p>
 
 ## How to use:
+Run the following command
 ```bash
 pip install -r requirements.txt
 ```
