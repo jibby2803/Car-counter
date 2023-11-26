@@ -17,10 +17,14 @@ classes = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "train",
             "teddy bear", "hair drier", "toothbrush"]
 
 cap = cv2.VideoCapture('./assets/videos/cars.mp4')
+
 if cap.isOpened():
     width = cap.get(3) 
     height = cap.get(4)
-    print(f'width = {width}, height = {height}')
+    # print(f'width = {width}, height = {height}')
+# output = cv2.VideoWriter('./images/result.mp4',
+#                          cv2.VideoWriter_fourcc(*'mp4v'),
+#                          30, (int(width), int(height)))
     
 mask = cv2.imread('./assets/images/mask.jpg')
 mask = cv2.resize(mask, (int(width), int(height)))
@@ -72,6 +76,13 @@ while True:
     
     cv2.putText(img, f'total count: {count}', (40, 40), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 0, 255), 2)           
     
-    cv2.imshow('image', img)
+    # output.write(img)
+    cv2.imshow('result', img)
     cv2.waitKey(1)
+    
+cap.release() 
+# output.release()
+cv2.destroyAllWindows() 
+    
+
    
